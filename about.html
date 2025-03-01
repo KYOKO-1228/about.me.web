@@ -61,10 +61,125 @@
         color:white;
     }
     
-    .content{
-        padding: 40px;
-        text-align: center;
+    
+
+    .leftcolumn{ 
+        
+        float: left;
+        width: 35%;
+    
     }
+    
+    .rightcolumn {
+        float: left;
+        width: 65%;
+        padding-left: 40px;
+    }
+    
+    .card {
+        background-color: #012233;
+        padding: 20px;
+        margin-top: 40px;
+        
+    }
+    
+    /* Clear floats after the columns */
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+        
+    }
+    .cardarea{
+        padding-left:40px;
+        padding-right:40px;
+        padding-bottom:40px;
+        font-family: Courier New;
+    }
+    
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+        .leftcolumn, .rightcolumn { 
+            width: 100%;
+            padding: 0;
+            
+        }
+    }
+    
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+        .topnav a {
+            float: none;
+            width: 100%;
+        }
+    }
+
+    
+    <!-- time line -->
+    .timeline{
+        position: relative; 
+    }
+   
+    .text-box{
+    
+        padding: 20px 30px; 
+        background-color: white; 
+        position: relative; 
+        border-radius: 6px;
+        font-size: 15px; 
+        margin-bottom: 20px; 
+        margin-left: 50px; 
+        animation: movedown 1s linear forwards; 
+        opacity: 0; 
+    }
+    
+    @keyframes movedown{
+        0%{
+            opacity:1; 
+            transform: translateY(-30px);
+        }
+        100%{
+            opacity:1; 
+            transform: translateY(0px);
+        }
+    }
+    
+    .text-box:nth-child(1){
+        animation-delay: 1s;
+    }
+    .text-box:nth-child(2){
+        animation-delay: 2s;
+    }
+    .text-box:nth-child(3){
+        animation-delay: 3s;
+    }
+    .text-box:nth-child(4){
+        animation-delay: 4s;
+    }
+    .text-box:nth-child(5){
+        animation-delay: 5s;
+    }
+    
+    .vl {
+        border-left: 6px solid #ffffff;
+        height: 950px;
+        
+    }
+    
+  
+    .container-arrow{
+        height: 0;
+        width: 0;
+        position: absolute; 
+        top: 28px; 
+        z-index: 1; 
+        border-top: 15px solid transparent; 
+        border-bottom: 15px solid transparent; 
+        border-right: 15px solid #afc6d3; 
+        left: -15px; 
+    }
+    
+
 
 
 
@@ -88,9 +203,55 @@
         <hr>
     </div>
     
-    <div class="content">
+   
+<div class="cardarea">    
+<div class="row">
+<div class="leftcolumn">
+    
+     <!-- time line -->
+<div class="card">
+    <h2 style="color:white">Timeline of education</h2>
+    <div class="vl" style="float:left"></div>
+    <div class="timeline">
         
+        <div class="text-box">
+           <h2>MIS</h2>
+            <small>2015 Aug. - 2020 Mar.</small>
+            <p>[EC (early childhood) & Junior school]</p>
+            <span class="container-arrow"></span>
+        </div>
+        <div class="text-box">
+           <h2>Hidaka Elementary School</h2>
+            <small>2020 Apr. - 2022 Mar.</small>
+            <p>[Elementary (graduated)]</p>
+            <span class="container-arrow"></span>
+        </div>
+        <div class="text-box">
+           <h2>Kariya Higashi Junior High School</h2>
+            <small>2022 Apr. - 2022 Dec.</small>
+            <p>[Junior High]</p>
+            <span class="container-arrow"></span>
+        </div>
+        <div class="text-box">
+           <h2>MIS</h2>
+            <small>2023 Jan. - 2024 June.</small>
+            <p>[Middle School (graduated)]</p>
+            <span class="container-arrow"></span>
+        </div>
+        <div class="text-box">
+           <h2>MIS</h2>
+            <small>2024 Aug. - </small>
+            <p>[Senior School (expected graduation: 2028)]</p>
+            <span class="container-arrow"></span>
+        </div>
+    
     </div>
+</div>
+</div>
+</div>
+</div>  
+    
+    
     <div class="footer">
     <hr>
     <h2 style="text-align:center">CONTACT ME</h2>
